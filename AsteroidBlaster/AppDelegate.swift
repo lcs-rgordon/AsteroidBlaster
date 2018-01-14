@@ -20,14 +20,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let sceneSize = Size(width: 375, height: 667)
         let gameScene = AsteroidBlasterScene(size: sceneSize)
         
+        // Log texture load errors
+        gameScene.textureManager.errorMode = .log
+
         // Set up window to present scene
         window = GameWindowController(size: sceneSize, scene: gameScene)
         window.window!.appearance = NSAppearance(named: .vibrantDark)
         window.window!.title = "Asteroid Blaster"
         window.window!.makeKeyAndOrderFront(nil)
         
-        // Log texture load errors
-        gameScene.textureManager.errorMode = .log
         
     }
     
