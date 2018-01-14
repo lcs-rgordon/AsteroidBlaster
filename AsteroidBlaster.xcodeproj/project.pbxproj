@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		8167591E200B8F5800D2949D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167591D200B8F5800D2949D /* AppDelegate.swift */; };
-		81675920200B8F5800D2949D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167591F200B8F5800D2949D /* ViewController.swift */; };
 		81675922200B8F5800D2949D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81675921200B8F5800D2949D /* Assets.xcassets */; };
 		81675925200B8F5800D2949D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81675923200B8F5800D2949D /* Main.storyboard */; };
+		8167592E200B8FB100D2949D /* AsteroidBlasterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167592D200B8FB100D2949D /* AsteroidBlasterScene.swift */; };
+		81675933200B8FC500D2949D /* Asteroid in Resources */ = {isa = PBXBuildFile; fileRef = 8167592F200B8FC400D2949D /* Asteroid */; };
+		81675934200B8FC500D2949D /* House in Resources */ = {isa = PBXBuildFile; fileRef = 81675930200B8FC500D2949D /* House */; };
+		81675935200B8FC500D2949D /* Explosion in Resources */ = {isa = PBXBuildFile; fileRef = 81675931200B8FC500D2949D /* Explosion */; };
+		81675936200B8FC500D2949D /* Ground in Resources */ = {isa = PBXBuildFile; fileRef = 81675932200B8FC500D2949D /* Ground */; };
+		81675938200B8FEB00D2949D /* ImagineEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81675939200B8FEB00D2949D /* ImagineEngine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8167591A200B8F5800D2949D /* AsteroidBlaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsteroidBlaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8167591D200B8F5800D2949D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8167591F200B8F5800D2949D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81675921200B8F5800D2949D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81675924200B8F5800D2949D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81675926200B8F5800D2949D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81675927200B8F5800D2949D /* AsteroidBlaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AsteroidBlaster.entitlements; sourceTree = "<group>"; };
+		8167592D200B8FB100D2949D /* AsteroidBlasterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidBlasterScene.swift; sourceTree = "<group>"; };
+		8167592F200B8FC400D2949D /* Asteroid */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Asteroid; sourceTree = "<group>"; };
+		81675930200B8FC500D2949D /* House */ = {isa = PBXFileReference; lastKnownFileType = folder; path = House; sourceTree = "<group>"; };
+		81675931200B8FC500D2949D /* Explosion */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Explosion; sourceTree = "<group>"; };
+		81675932200B8FC500D2949D /* Ground */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ground; sourceTree = "<group>"; };
+		81675939200B8FEB00D2949D /* ImagineEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImagineEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81675938200B8FEB00D2949D /* ImagineEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +50,7 @@
 			children = (
 				8167591C200B8F5800D2949D /* AsteroidBlaster */,
 				8167591B200B8F5800D2949D /* Products */,
+				81675937200B8FEB00D2949D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +65,26 @@
 		8167591C200B8F5800D2949D /* AsteroidBlaster */ = {
 			isa = PBXGroup;
 			children = (
+				8167592D200B8FB100D2949D /* AsteroidBlasterScene.swift */,
 				8167591D200B8F5800D2949D /* AppDelegate.swift */,
-				8167591F200B8F5800D2949D /* ViewController.swift */,
 				81675921200B8F5800D2949D /* Assets.xcassets */,
 				81675923200B8F5800D2949D /* Main.storyboard */,
 				81675926200B8F5800D2949D /* Info.plist */,
 				81675927200B8F5800D2949D /* AsteroidBlaster.entitlements */,
+				8167592F200B8FC400D2949D /* Asteroid */,
+				81675931200B8FC500D2949D /* Explosion */,
+				81675932200B8FC500D2949D /* Ground */,
+				81675930200B8FC500D2949D /* House */,
 			);
 			path = AsteroidBlaster;
+			sourceTree = "<group>";
+		};
+		81675937200B8FEB00D2949D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81675939200B8FEB00D2949D /* ImagineEngine.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81675922200B8F5800D2949D /* Assets.xcassets in Resources */,
+				81675934200B8FC500D2949D /* House in Resources */,
+				81675935200B8FC500D2949D /* Explosion in Resources */,
+				81675936200B8FC500D2949D /* Ground in Resources */,
+				81675933200B8FC500D2949D /* Asteroid in Resources */,
 				81675925200B8F5800D2949D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81675920200B8F5800D2949D /* ViewController.swift in Sources */,
 				8167591E200B8F5800D2949D /* AppDelegate.swift in Sources */,
+				8167592E200B8FB100D2949D /* AsteroidBlasterScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

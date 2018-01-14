@@ -7,20 +7,34 @@
 //
 
 import Cocoa
+import ImagineEngine
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+    
+    private var window: GameWindowController!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        // Create scene
+        let sceneSize = Size(width: 375, height: 667)
+        let gameScene = AsteroidBlasterScene(size: sceneSize)
+        
+        // Set up window to present scene
+        window = GameWindowController(size: sceneSize, scene: gameScene)
+        window.window!.appearance = NSAppearance(named: .vibrantDark)
+        window.window!.title = "Asteroid Blaster"
+        window.window!.makeKeyAndOrderFront(nil)
+        
+        // Log texture load errors
+        gameScene.textureManager.errorMode = .log
+        
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
+    
+    
 }
 
