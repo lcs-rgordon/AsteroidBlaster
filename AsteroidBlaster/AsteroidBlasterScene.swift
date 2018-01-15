@@ -10,7 +10,7 @@ class AsteroidBlasterScene : Scene {
         
         // Create the ground
         let groundSize = Size(width: size.width, height: 100)
-        let ground = Block(size: groundSize, textureCollectionName: "Ground")
+        let ground = Block(size: groundSize, textureCollectionName: "Ground", textureScale: 2)
         
         // Position ground at bottom of scene
         ground.position.x = center.x
@@ -31,6 +31,7 @@ class AsteroidBlasterScene : Scene {
             let house = Actor()
             house.group = housesGroup
             house.animation = Animation(name: "House", frameCount: 1, frameDuration: 0)
+            house.animation!.textureScale = 2
             self.add(house)
             
             // Set the house's positions
@@ -44,6 +45,7 @@ class AsteroidBlasterScene : Scene {
             // Create the asteroid
             let asteroid = Actor()
             asteroid.animation = Animation(name: "Asteroid", frameCount: 1, frameDuration: 0)
+            asteroid.animation!.textureScale = 2
             
             // Position the asteroid
             let positionRange = scene.size.width - asteroid.size.width
@@ -106,12 +108,13 @@ extension Actor {
         velocity = .zero
         
         // Define the animation
-        let explosionAnimation = Animation(
+        var explosionAnimation = Animation(
             name: "Explosion",
             frameCount: 7,
             frameDuration: 0.07,
             repeatMode: .never
         )
+        explosionAnimation.textureScale = 2
         
         return playAnimation(explosionAnimation).then {
             self.remove()   // Actor removes itself from the scene

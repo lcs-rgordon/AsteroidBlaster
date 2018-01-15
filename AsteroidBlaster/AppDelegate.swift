@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Log texture load errors
         gameScene.textureManager.errorMode = .log
+        print("Main screen scale: \(Screen.main?.backingScaleFactor ?? 1)")
 
         // Set up window to present scene
         window = GameWindowController(size: sceneSize, scene: gameScene)
@@ -29,13 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.window!.title = "Asteroid Blaster"
         window.window!.makeKeyAndOrderFront(nil)
         
-        
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-    
     
 }
 
